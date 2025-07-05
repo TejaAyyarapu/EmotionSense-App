@@ -6,10 +6,10 @@ let map; // Variable to hold the map instance
 // --- 1. Load AI Models ---
 // This function loads all the necessary models for face detection and emotion recognition.
 Promise.all([
-    faceapi.nets.tinyFaceDetector.loadFromUri('/models'),
-    faceapi.nets.faceLandmark68Net.loadFromUri('/models'),
-    faceapi.nets.faceRecognitionNet.loadFromUri('/models'), // Not used for emotion but good to have
-    faceapi.nets.faceExpressionNet.loadFromUri('/models')
+    faceapi.nets.tinyFaceDetector.loadFromUri('./models'),
+    faceapi.nets.faceLandmark68Net.loadFromUri('./models'),
+    faceapi.nets.faceRecognitionNet.loadFromUri('./models'), // Not used for emotion but good to have
+    faceapi.nets.faceExpressionNet.loadFromUri('./models')
 ]).then(startApp);
 
 function startApp() {
